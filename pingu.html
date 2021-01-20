@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="okey.css">
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 90%;
+  margin: 0;
+  font-family: Serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #dea5a4;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #b19cd9;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color:}
+#Gallery {background-color: #77dd77;}
+#Community {background-color: #FFE5B4;}
+#About {background-color: #AEC6CF;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#ffb347')">Home</button>
+<button class="tablink" onclick="openPage('Gallery', this, '#77dd77')" id="defaultOpen">Gallery</button>
+<button class="tablink" onclick="openPage('Community', this, '#FFE5B4')">Community</button>
+<button class="tablink" onclick="openPage('About', this, '#AEC6CF')">About</button>
+
+</style>
+</head>
+
+
+<div id="Home" class="tabcontent">
+<style>
+  :root {
+    --penguin-size: 400px;
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+
+  @media (max-width: 200px) {
+    :root {
+      /* Only change code below this line */
+
+      /* Only change code above this line */
+    }
+  }
+
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 5s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://st4.depositphotos.com/3146979/20504/v/600/depositphotos_205041434-stock-video-abstract-animated-stained-background-seamless.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+  background-attachment: fixed; 
+  position: relative;
+  }
+
+  .penguin * {
+    position: absolute;
+  }
+</style>
+
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+
+
+
+<h1 style="text-align:center; font-family:brush script mt; font-size:500%; color:black;">Welcome to Pingu!</h1>
+<p style="text-align:center; font-family:verdana; color:black;">Hi, my name is Pingu. I have so many stories to tell you. I hope to hear from you too.
+Nice to meet you! </p>
+
+
+
+
+
+<h1 style="background-color:powderblue; text-align:center; font-family:cursive; color:black; ">Follow Me!</h1>
+<p style="text-align:center; font-family:sans-serif; color:black;">Facebook: <a href="https://www.facebook.com/justcallmeRiUniverse/">Pat Miyamoto Maglaya</a></p>
+<p style="text-align:center; font-family:sans-serif; color:black;">Instagram: <a href="https://www.instagram.com/psychopaaaatt/">@psychopaaaatt</a></p>
+<p style="text-align:center;font-family:sans-serif; color:black;">Snapchat: <a href="https://www.snapchat.com/add/patsupnet28">patsupnet28</a></p>
+
+</div>
+<div id="Gallery" class="tabcontent">
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">High School Memories</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://lh3.googleusercontent.com/-MSCJN-k0yhXVOJCe7pUx0qjn8iVHYBRuIM0wKy75TnrEiOSsQko29Y5T1f1p3RKq0w_v2AANtPcOzfZ8VbpbX60mbAmIxdv8DarZtm62qyUDnDBh5xpMaZuOhGRBtjPuWKc2VEGDJRB2Sn-Ov52YP7qnmT5SACyhGYiRsnAU34AMfasNALNwIj-EoXUd9_tCi23UvvywWYckLCDFXBOTZ1t4jZVc6ptWrBWkg65uajow03rvgNEc0jetkaeqABdcCo4EYXx1FIxqU-w1ezdpbRjsigBeK275KyUk6N4haWlZpiJM8f5TZrV-bi-9-VkuAR25F1C23zPtIqJVdPLldSbY9gPrDiu6wf3CvK-OvINZV8QH-qeW5E95QlnWC9f-LVxDPtb7nOWwQjdhJgu2C51tkgMTl1QsW20IvlUrPudI2tSSk8mxQ3LVvEdkgW9wVzwL58t9zyuaCK5vz_EX19VbqZ-VnHHy9np3IdVOo_tEagq_dQj1bJYHrFKoFb4pgn7Yj3I3Ss9bzw00rbqJmqj51Ax658mLA-Pvb_ps3vS78jOWXonzGk2sPVkxU9SbvwPZSAPDmdb005_EtT-geXtExK-5LMFs9MporDXNuCBcc8EI642r_qQDZn1JKdHc02e11EpNQgL7j8NsrsaQBfTA6bRT_zUokz34isGBj6hbq6ExiZm86A-4ZtigQ=w552-h414-no?authuser=0" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://lh3.googleusercontent.com/z9nAmnt1byqxWDI2S6Abk8ItoPembINGC2lganoEhk4E2IqNUmWOORD1-u5fIudBpPGFRIzwwxrrMjfH-2Wriq5YJkYiLnEijSKsaPvHvsA7XhvGHIVO-iicPXq_Oz5vxDclNtj2DkcSHt0wrdkaBixpsGPSkm33cCeT0ohP7EALZoCtn0R0d2EdoClIqAtPdhFYOMBH8GxQNvPveERBONWeBpvKnnAoXfiqDGPgz2fxOjBPcboFS3e6ihyvf_GAxz0aea5yk8zN2oPbxt4yi-a7Yngb5a50Pw6ZyW9c9t56_gor7soYjvmqf4fTLRmODrh7Ix_5JF5l8rL46CXcjCiQRmzIL0CsRix7L5-t5URK-OxwEcbWMMED-VnIvICvfUMJDNghmanyz3tnWihafBOERYDBXiKFwvSdstu8UFN2sihigfQ9ieiwbeu6cg-bt2v_K7l1zQIt8yKYztgisC4LQouFSHF4gsNgczetjM_lf2GzA3pYTmxsoSc0UCB-uJfEZ8b_RO6dtk5XI5oo7k3jSI0iu1PgwkL1nkiyrXMRnvwxGWTJRE2XHHYLWsKB3mEYJEoLFNZ1liyemDGJEGDYOMAmy7DUnEiMgi_FDQjw1h33csjmRUwVQ4V7HSKd4I8SjoVktk4-o88_hvJ_71c3Nqs-j2KVU9vBFYyWiHL2r7dPHFfhENBIY-gi=w552-h414-no?authuser=0" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://lh3.googleusercontent.com/LHABO0rwk_HamV0N03FK1NXW0geDso9cQmUE4nHJcRwICvacoJG-hoEpXmS8e-pn5GxHEXbgK1cRylfOprQ68lFUUXN2-PQpT4_CYZDvl2f3es0doP-EDXrVhLM1V_XqxywCFBAmXW9AR6sKi1EsJ5o_7pUhtFyjT0facSOXLhr6e1z2EbiQMN-eRLqDKjQP8NIW2VJHuplCnWEvWML-9ImXwSHZYpyFMOjLx0ewJGnjeYQ_1QHDLJVL7vETagElfwgy9cvCtPG-THTJw3v3QI85aSmoC3v0zLD6cANp1TzAkv9ng1jHwH-QYdWX5SRpcVbY5zTAqF3BFx64miodjG3aINygWLgsaYa8q7vvk05sOmyY6h4k-cV7Q4mQaHFS8d-da6OQ-oH5YKYLxQtBZTCdV_otby42ANbj5s7uhYRhulTc9VN4-xARmTwtkKmwC1Fs4MrNGzmMeZF3xw16y3Q5TX_dsVKiGlXX5ZMwPm_5qfvgaG_3eaZ3hGY2yjBWaXC2nSVOaEnkwtDjyZQUjDqTvYkEe7u0rCbyfZzOGIHWI6TpPreqgUNCKFr7Mol7QDYtLK9oeRz5bI8YCGMOFdu8Vka8GAoN1KgfjuMLtXptoPxF15zuRWLZKuAz9jTvpVBakllyyrqMU-FqPv11j_PXA9RwZK_T6IzhHxRWQ_gGJrO4J9ZoKZhY_vKW=w522-h695-no?authuser=0" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://lh3.googleusercontent.com/v2z7DWXSogeESu5o_Syi4GOh8j1JL5aW2ok_MQSqIR54l3cRthRoFSsFDQdnfV61vHENB_nXodP_TVjB5cMXszYWKiW3ZA3-tFja_XvKipbejw0BgomG45WmarIcz7DD-mKcTGaL-eoaEYdEHHSMJ5UclFOY7E586MRaAfv9JdAA0rKd28vekHSracRKzrwbd9ATc0JXbZAtEpTy9kC8gD61jwakxDL431zFkqT-OonxRhz1TmGN5ru6ganqaKJzxt02RR6r6iTjlHOrOebA7DUJHFtatAY1s-289kycxLRfMhzDkqpGYycFTervTAChRFo27XPn3IyfIbTWTZWgTEYudS-bYfayCXBHP8Va-ohI8H4FLD9souVtp4ogPRH6iBfHRtMO9RPD-Cnggp3USJ5icWn13gSqCELvjdikSG_SwXZa4ddSa0nWB5hwywUouf7PL-Om2FMHEl4yDJAyUc-2YE_uveL_qYZ3Z1sRTouBGuvt10o61zCOFX2xhcWCZvVC-oDxLAPDIcmJXrPIdnC7DmedcJVT9zq-71zy7loCM5pOZneD-OcD3fQcwxgH7Q5uvlBpypXLaWhkabNIzdEprnclmfrLee4P4koEqEWDOArukfDdSc_CkUjwoXz9YZBfPtfTJLzIJddRcAwhPhZkwXZyCeCeWE5-OAQNCQImP9tf5SUP5HwJbLIG=w552-h310-no?authuser=0" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://lh3.googleusercontent.com/xPE7zJimQBz_A0YM-WbCG39W2jETIkW3UGoaGWQq-4I6zdtW16z7IIL_O86y6x1bJ6udplv2Ix2o-AWD5bsBFkJe_wXbe58X-H3PxNaLnUZ8r9-ulU1Lo7APWkEgA-MplhyFBuNZuzwYLbsti8K__sPgospVUEuUbBq_F_CI8fSjH9A3qUGQRDszFFLR2lmVmN0g803x2QcctOKYLeTS_GnG05l_vDuv7C-gvV9mKXW4_nps2wnGwdOpU4yq_l8i_ektUN8mlEkqlHWv-71AVpvojPDaWBsBrluDiyxsnsCp38c-axy8Tpy8gMJeXtsEWQLFleN_Yx99kHBNB4LFVZyuQUC0r28OOjFFqGmFmnu10KMg__upU2qnfoZmm_TClfkCH3HIdsHPMF0AmGvv25jLwIIUpWr_XLXtH3W4uPkAatk8ppHXIKgfOxjsOiO1R1GHDgvhmtPwx77R0FKz-9JWX9W7voetx6hIC1b0L7sH8ocgrWBsa7zz8M_-Sb6g74dt-gyubpu2RcSeXBkeKmcKBCAMcMXxssdPzPw75TWdJIqENqd3BlHT0_lQGXY7F5gtpDkAn1wHBvXTOjVE5d5KkKOMk8neYM0XzwdqVZ2wjQs3xV094uE9GtmcgSkjCCGQnc9I_MhcFHqVR1a7F2mXTHqc3JrT5ggbDsBWBNVSB1ovjUVwO1JpetXN=w960-h540-no?authuser=0" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://lh3.googleusercontent.com/mwVeUMyoiQRU8RaMGT8uZEvje0ZRaOnpkKH0YOmxDJZiIBBSAKzVLzTyFY9eomUo3d8_lS8yHKhyjKvhLUox66inQPUubvom9MU-t74mNXAYvftEEXW_A9BudpryI3iv27KF9tkgeRpDJnyVYo0iosrEMvtIWHZ71HbuLcwb6TMOcqplLrkR5jDY3HOeuQsiLkReUmo6xgsXPcYi3_QuXUrkfS7KdU2cc42_XQnBf1gMETiE9QVFxh12DxG7IEI5fQ0xZqOZcyr0mLWWcZGPkxP_lbo3-gCqiKO_RZKf5HR9gH4OphY4rAntAHh4WJQSCUN5b_YTTENvOrqwyA24v1kZ6I6EIu__vwTaC2wEUOIWuc3zGIZykTzrfiKoqWAUkgnuw7gt_uagwG_40hyWwF2QBteL_MNqbg7owxcSahC5RFsHsp61lnuqsCzG9PMaHNMdc92QyBFqT_-cNjyPol-j8g5ThH1EPCmYawRGrEVAjKlRC5CxKDxn0DmVx018Yd1JgLtVGF20wBv_5TS8qtnDR2kOQOVSWKGSf44RkKMqjBnJk0xwLWD02vwMUTGPHfb-uE3bOcFzhsMZckQWLK4ys9ODmsP8hLNcRJas08H-eJ5NX5GwCjylowAqyudIMDh3LeaUETL6OOdFw7m11c5jbeO6CtYoFqgYXg1_6DQubcFvNBrbpz8Juxwl=w552-h310-no?authuser=0" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/-MSCJN-k0yhXVOJCe7pUx0qjn8iVHYBRuIM0wKy75TnrEiOSsQko29Y5T1f1p3RKq0w_v2AANtPcOzfZ8VbpbX60mbAmIxdv8DarZtm62qyUDnDBh5xpMaZuOhGRBtjPuWKc2VEGDJRB2Sn-Ov52YP7qnmT5SACyhGYiRsnAU34AMfasNALNwIj-EoXUd9_tCi23UvvywWYckLCDFXBOTZ1t4jZVc6ptWrBWkg65uajow03rvgNEc0jetkaeqABdcCo4EYXx1FIxqU-w1ezdpbRjsigBeK275KyUk6N4haWlZpiJM8f5TZrV-bi-9-VkuAR25F1C23zPtIqJVdPLldSbY9gPrDiu6wf3CvK-OvINZV8QH-qeW5E95QlnWC9f-LVxDPtb7nOWwQjdhJgu2C51tkgMTl1QsW20IvlUrPudI2tSSk8mxQ3LVvEdkgW9wVzwL58t9zyuaCK5vz_EX19VbqZ-VnHHy9np3IdVOo_tEagq_dQj1bJYHrFKoFb4pgn7Yj3I3Ss9bzw00rbqJmqj51Ax658mLA-Pvb_ps3vS78jOWXonzGk2sPVkxU9SbvwPZSAPDmdb005_EtT-geXtExK-5LMFs9MporDXNuCBcc8EI642r_qQDZn1JKdHc02e11EpNQgL7j8NsrsaQBfTA6bRT_zUokz34isGBj6hbq6ExiZm86A-4ZtigQ=w552-h414-no?authuser=0" style="width:100%" onclick="currentSlide(1)" alt="Graduation">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/z9nAmnt1byqxWDI2S6Abk8ItoPembINGC2lganoEhk4E2IqNUmWOORD1-u5fIudBpPGFRIzwwxrrMjfH-2Wriq5YJkYiLnEijSKsaPvHvsA7XhvGHIVO-iicPXq_Oz5vxDclNtj2DkcSHt0wrdkaBixpsGPSkm33cCeT0ohP7EALZoCtn0R0d2EdoClIqAtPdhFYOMBH8GxQNvPveERBONWeBpvKnnAoXfiqDGPgz2fxOjBPcboFS3e6ihyvf_GAxz0aea5yk8zN2oPbxt4yi-a7Yngb5a50Pw6ZyW9c9t56_gor7soYjvmqf4fTLRmODrh7Ix_5JF5l8rL46CXcjCiQRmzIL0CsRix7L5-t5URK-OxwEcbWMMED-VnIvICvfUMJDNghmanyz3tnWihafBOERYDBXiKFwvSdstu8UFN2sihigfQ9ieiwbeu6cg-bt2v_K7l1zQIt8yKYztgisC4LQouFSHF4gsNgczetjM_lf2GzA3pYTmxsoSc0UCB-uJfEZ8b_RO6dtk5XI5oo7k3jSI0iu1PgwkL1nkiyrXMRnvwxGWTJRE2XHHYLWsKB3mEYJEoLFNZ1liyemDGJEGDYOMAmy7DUnEiMgi_FDQjw1h33csjmRUwVQ4V7HSKd4I8SjoVktk4-o88_hvJ_71c3Nqs-j2KVU9vBFYyWiHL2r7dPHFfhENBIY-gi=w552-h414-no?authuser=0" style="width:100%" onclick="currentSlide(2)" alt="Filming">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/LHABO0rwk_HamV0N03FK1NXW0geDso9cQmUE4nHJcRwICvacoJG-hoEpXmS8e-pn5GxHEXbgK1cRylfOprQ68lFUUXN2-PQpT4_CYZDvl2f3es0doP-EDXrVhLM1V_XqxywCFBAmXW9AR6sKi1EsJ5o_7pUhtFyjT0facSOXLhr6e1z2EbiQMN-eRLqDKjQP8NIW2VJHuplCnWEvWML-9ImXwSHZYpyFMOjLx0ewJGnjeYQ_1QHDLJVL7vETagElfwgy9cvCtPG-THTJw3v3QI85aSmoC3v0zLD6cANp1TzAkv9ng1jHwH-QYdWX5SRpcVbY5zTAqF3BFx64miodjG3aINygWLgsaYa8q7vvk05sOmyY6h4k-cV7Q4mQaHFS8d-da6OQ-oH5YKYLxQtBZTCdV_otby42ANbj5s7uhYRhulTc9VN4-xARmTwtkKmwC1Fs4MrNGzmMeZF3xw16y3Q5TX_dsVKiGlXX5ZMwPm_5qfvgaG_3eaZ3hGY2yjBWaXC2nSVOaEnkwtDjyZQUjDqTvYkEe7u0rCbyfZzOGIHWI6TpPreqgUNCKFr7Mol7QDYtLK9oeRz5bI8YCGMOFdu8Vka8GAoN1KgfjuMLtXptoPxF15zuRWLZKuAz9jTvpVBakllyyrqMU-FqPv11j_PXA9RwZK_T6IzhHxRWQ_gGJrO4J9ZoKZhY_vKW=w522-h695-no?authuser=0" style="width:100%" onclick="currentSlide(3)" alt="United Nation">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/v2z7DWXSogeESu5o_Syi4GOh8j1JL5aW2ok_MQSqIR54l3cRthRoFSsFDQdnfV61vHENB_nXodP_TVjB5cMXszYWKiW3ZA3-tFja_XvKipbejw0BgomG45WmarIcz7DD-mKcTGaL-eoaEYdEHHSMJ5UclFOY7E586MRaAfv9JdAA0rKd28vekHSracRKzrwbd9ATc0JXbZAtEpTy9kC8gD61jwakxDL431zFkqT-OonxRhz1TmGN5ru6ganqaKJzxt02RR6r6iTjlHOrOebA7DUJHFtatAY1s-289kycxLRfMhzDkqpGYycFTervTAChRFo27XPn3IyfIbTWTZWgTEYudS-bYfayCXBHP8Va-ohI8H4FLD9souVtp4ogPRH6iBfHRtMO9RPD-Cnggp3USJ5icWn13gSqCELvjdikSG_SwXZa4ddSa0nWB5hwywUouf7PL-Om2FMHEl4yDJAyUc-2YE_uveL_qYZ3Z1sRTouBGuvt10o61zCOFX2xhcWCZvVC-oDxLAPDIcmJXrPIdnC7DmedcJVT9zq-71zy7loCM5pOZneD-OcD3fQcwxgH7Q5uvlBpypXLaWhkabNIzdEprnclmfrLee4P4koEqEWDOArukfDdSc_CkUjwoXz9YZBfPtfTJLzIJddRcAwhPhZkwXZyCeCeWE5-OAQNCQImP9tf5SUP5HwJbLIG=w552-h310-no?authuser=0" style="width:100%" onclick="currentSlide(4)" alt="Ice Cream Chilling">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/xPE7zJimQBz_A0YM-WbCG39W2jETIkW3UGoaGWQq-4I6zdtW16z7IIL_O86y6x1bJ6udplv2Ix2o-AWD5bsBFkJe_wXbe58X-H3PxNaLnUZ8r9-ulU1Lo7APWkEgA-MplhyFBuNZuzwYLbsti8K__sPgospVUEuUbBq_F_CI8fSjH9A3qUGQRDszFFLR2lmVmN0g803x2QcctOKYLeTS_GnG05l_vDuv7C-gvV9mKXW4_nps2wnGwdOpU4yq_l8i_ektUN8mlEkqlHWv-71AVpvojPDaWBsBrluDiyxsnsCp38c-axy8Tpy8gMJeXtsEWQLFleN_Yx99kHBNB4LFVZyuQUC0r28OOjFFqGmFmnu10KMg__upU2qnfoZmm_TClfkCH3HIdsHPMF0AmGvv25jLwIIUpWr_XLXtH3W4uPkAatk8ppHXIKgfOxjsOiO1R1GHDgvhmtPwx77R0FKz-9JWX9W7voetx6hIC1b0L7sH8ocgrWBsa7zz8M_-Sb6g74dt-gyubpu2RcSeXBkeKmcKBCAMcMXxssdPzPw75TWdJIqENqd3BlHT0_lQGXY7F5gtpDkAn1wHBvXTOjVE5d5KkKOMk8neYM0XzwdqVZ2wjQs3xV094uE9GtmcgSkjCCGQnc9I_MhcFHqVR1a7F2mXTHqc3JrT5ggbDsBWBNVSB1ovjUVwO1JpetXN=w960-h540-no?authuser=0" style="width:100%" onclick="currentSlide(5)" alt="Review">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/mwVeUMyoiQRU8RaMGT8uZEvje0ZRaOnpkKH0YOmxDJZiIBBSAKzVLzTyFY9eomUo3d8_lS8yHKhyjKvhLUox66inQPUubvom9MU-t74mNXAYvftEEXW_A9BudpryI3iv27KF9tkgeRpDJnyVYo0iosrEMvtIWHZ71HbuLcwb6TMOcqplLrkR5jDY3HOeuQsiLkReUmo6xgsXPcYi3_QuXUrkfS7KdU2cc42_XQnBf1gMETiE9QVFxh12DxG7IEI5fQ0xZqOZcyr0mLWWcZGPkxP_lbo3-gCqiKO_RZKf5HR9gH4OphY4rAntAHh4WJQSCUN5b_YTTENvOrqwyA24v1kZ6I6EIu__vwTaC2wEUOIWuc3zGIZykTzrfiKoqWAUkgnuw7gt_uagwG_40hyWwF2QBteL_MNqbg7owxcSahC5RFsHsp61lnuqsCzG9PMaHNMdc92QyBFqT_-cNjyPol-j8g5ThH1EPCmYawRGrEVAjKlRC5CxKDxn0DmVx018Yd1JgLtVGF20wBv_5TS8qtnDR2kOQOVSWKGSf44RkKMqjBnJk0xwLWD02vwMUTGPHfb-uE3bOcFzhsMZckQWLK4ys9ODmsP8hLNcRJas08H-eJ5NX5GwCjylowAqyudIMDh3LeaUETL6OOdFw7m11c5jbeO6CtYoFqgYXg1_6DQubcFvNBrbpz8Juxwl=w552-h310-no?authuser=0" style="width:100%" onclick="currentSlide(6)" alt="Elevator Shenanigans">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
+
+</div>
+
+<div id="Community" class="tabcontent">
+  <!--Begin Website Toolbox Forum Embed Code-->
+<div id="wtEmbedCode"><script type="text/javascript" id="embedded_forum" src="https://yowriri1973.discussion.community/js/mb/embed.js"></script>
+<noscript><a href="https://yowriri1973.discussion.community/">Pingu</a></noscript></div>
+<!--End Website Toolbox Forum Embed Code-->
+
+
+</body>
+</html>
+
+</div>
+<div id="About" class="tabcontent">
+  <h1><img src="https://lh3.googleusercontent.com/bPn44IX5uEcJKX72qxm_rZHzf_HwzlbPPNF5WCsnQMpW7u7OHtecZQGCau_PmnYCJIkUA9dIIJ64GrwsIga9ZuC4kNN46G1s4h3tWLQeSlUyPOc6_vlIvMN59SdryDW-Z-c30JMMi_tE6rVysZJSj0essnQRGB5EabQlPD9tow9HXCr3ciU_tbd0EMZmvzrUjwdJ5_FQhKMpwl6XfBZWs_YJR2L90NAZdf1RsoMe_VzX2u7mnHn9fAIadFWKbr5XvuOS-81TOqKs9eJ8WDvel38h1hZECurOWqip-RvdT5ORyrV3EpP7DJU40w_KQV-sY8cg1ty-iUfX_2SbUhLYTA_aGkAYwg1GVtAZIJexHTHLEMI0SNijFhkCT8uzedVMbjZ_Vmtdap6NAvsgCWtYvw-WOdBraQcMcDWNcePp26Wt-J4uPKJtTPQGmKVw64tI-JAr7qeMi1aCWWJcZyAF-ZPQ-QdiS1nNTmi8L6o_6COG8c7bThOuDpVyKqRBWtsfk3tTHQLrTFB0l8HMf8I8J8rAi0NLFoDJeqfAiqgcR_Lk8rUfalI3FKcM-FrFo9AvCugmVvTQOktNNVWmib3v2_IOvC6zjpJllZOfnA2_ziQe-xAByMjVORPu7_tKKvH5j-bPeBiAJ6-uQ_a6aB4ieOa8Xb7Pg3S0OPLb_zp-AuLwAeQLc05ijJDsibRG=w522-h695-no?authuser=0" alt="Patricia" style="float:right;width:350px;height:450px;">
+Hi! I am Pat Miyamoto, the creator of Pingu. I am a second-year college at University of the Cordilleras,. I love reading and writing about stuffs and such. As I share mine, please do share yours. I would love to read anything from you. You can also read some of my work at Voices of Youth.</h1>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
+
